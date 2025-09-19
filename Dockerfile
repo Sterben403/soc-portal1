@@ -1,4 +1,3 @@
-# ---- Backend (FastAPI) ----
 FROM python:3.11-slim
 
 ENV DEBIAN_FRONTEND=noninteractive \
@@ -6,31 +5,28 @@ ENV DEBIAN_FRONTEND=noninteractive \
     PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
-# Системные зависимости для сборки популярных пакетов:
-# - libpq-dev: psycopg2
-# - build-essential, gcc/g++: bcrypt, uvloop и т.п.
-# - libffi-dev, libssl-dev: крипто-библиотеки
-# - libjpeg-dev, zlib1g-dev: Pillow
-# - rustc, cargo: orjson и некоторые крипто-пакеты
+# системные либы для сборки/работы популярных пакетов
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential gcc g++ make \
-    libpq-dev libffi-dev libssl-dev \
+    libffi-dev libssl-dev \
     libjpeg-dev zlib1g-dev \
-    rustc cargo git curl \
+    curl git \
   && rm -rf /var/lib/apt/lists/*
 
-# Обновим инструменты сборки Python
+# апгрейд инструментов
 RUN pip install --upgrade pip setuptools wheel
 
 WORKDIR /app
 
-# сначала ставим зависимости — чтобы кэшировалось
+# заранее ставим бинарное колесо PyYAML (чтобы ни один пакет не дотащил старую 5.x из исходников)
+RUN pip install --only-binary=:all: PyYAML==6.0.2
+
+# зависимости → кэш слоя
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-# затем копируем весь код
+# код
 COPY . .
 
 EXPOSE 8000
-# подставь свой модуль/приложение, если отличается
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
