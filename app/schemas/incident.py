@@ -13,11 +13,16 @@ class IncidentCreate(IncidentBase):
 class IncidentUpdate(BaseModel):
     status: str
 
-class IncidentOut(IncidentBase):
+class IncidentOut(BaseModel):
     id: int
+    title: str
+    description: Optional[str] = None
     status: str
-    created_at: datetime
+    priority: str
     client_id: int
+    created_at: datetime
+    first_response_at: Optional[datetime] = None
+    closed_at: Optional[datetime] = None
 
     class Config:
         orm_mode = True

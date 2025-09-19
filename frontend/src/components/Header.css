@@ -1,0 +1,48 @@
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-center-nav {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.modern-header {
+  background: #f7f9fb;
+  border-bottom: 1px solid #e5e7eb;
+  min-height: 64px;
+}
+
+.header-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+}
+
+.nav-link-modern {
+  color: #222;
+  font-weight: 500;
+  padding: 8px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  background: transparent;
+  transition: background 0.2s, color 0.2s;
+  display: inline-block;
+}
+.nav-link-modern.active,
+.nav-link-modern:focus {
+  background: #0d6efd;
+  color: #fff;
+}
+/* dropdown исправляет позиционирование в хедере */
+.dropdown .dropdown-menu.show {
+  display: block;
+  margin-top: 8px;
+  border-radius: 12px;
+}

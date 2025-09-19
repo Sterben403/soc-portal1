@@ -1,7 +1,8 @@
-from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Enum
-from sqlalchemy.sql import func
-from app.db.database import Base
 import enum
+from sqlalchemy import Column, Integer, String, DateTime, ForeignKey, Enum as SQLEnum
+from sqlalchemy.sql import func
+from app.db.base import Base
+from sqlalchemy.orm import relationship
 
 class TicketStatus(str, enum.Enum):
     open = "Открыт"
@@ -19,7 +20,8 @@ class Ticket(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     client_id = Column(Integer, ForeignKey("users.id"), nullable=False)
-    category = Column(Enum(TicketCategory), nullable=False)
+    category = Column(SQLEnum(TicketCategory), nullable=False)
     title = Column(String, nullable=False)
-    status = Column(Enum(TicketStatus), default=TicketStatus.open)
+    status = Column(SQLEnum(TicketStatus), default=TicketStatus.open)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
+    messages = relationship("TicketMessage", back_populates="ticket", cascade="all, delete-orphan")

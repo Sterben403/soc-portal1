@@ -1,0 +1,137 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: soc-portal-backend
+  namespace: soc-portal
+  labels:
+    app: soc-portal-backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: soc-portal-backend
+  template:
+    metadata:
+      labels:
+        app: soc-portal-backend
+    spec:
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        fsGroup: 1000
+      containers:
+      - name: backend
+        image: ghcr.io/your-org/soc-portal:latest
+        ports:
+        - containerPort: 8000
+        env:
+        - name: DATABASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: soc-portal-config
+              key: DATABASE_URL
+        - name: SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: soc-portal-secrets
+              key: SECRET_KEY
+        - name: CSRF_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: soc-portal-secrets
+              key: CSRF_SECRET
+        - name: ALGORITHM
+          valueFrom:
+            configMapKeyRef:
+              name: soc-portal-config
+              key: ALGORITHM
+        - name: ACCESS_TOKEN_EXPIRE_MINUTES
+          valueFrom:
+            configMapKeyRef:
+              name: soc-portal-config
+              key: ACCESS_TOKEN_EXPIRE_MINUTES
+        - name: COOKIE_SECURE
+          valueFrom:
+            configMapKeyRef:
+              name: soc-portal-config
+              key: COOKIE_SECURE
+        - name: COOKIE_SAMESITE
+          valueFrom:
+            configMapKeyRef:
+              name: soc-portal-config
+              key: COOKIE_SAMESITE
+        - name: BACKEND_CORS_ORIGINS
+          valueFrom:
+            configMapKeyRef:
+              name: soc-portal-config
+              key: BACKEND_CORS_ORIGINS
+        - name: ENCRYPTION_KEY
+          valueFrom:
+            secretKeyRef:
+              name: soc-portal-secrets
+              key: ENCRYPTION_KEY
+        - name: SMTP_HOST
+          value: "smtp.gmail.com"
+        - name: SMTP_PORT
+          value: "587"
+        - name: SMTP_USER
+          valueFrom:
+            secretKeyRef:
+              name: soc-portal-secrets
+              key: SMTP_USER
+        - name: SMTP_PASS
+          valueFrom:
+            secretKeyRef:
+              name: soc-portal-secrets
+              key: SMTP_PASS
+        - name: TELEGRAM_BOT_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: soc-portal-secrets
+              key: TELEGRAM_BOT_TOKEN
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        volumeMounts:
+        - name: attachments
+          mountPath: /app/attachments
+      volumes:
+      - name: attachments
+        persistentVolumeClaim:
+          claimName: attachments-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: soc-portal-backend
+  namespace: soc-portal
+spec:
+  selector:
+    app: soc-portal-backend
+  ports:
+  - protocol: TCP
+    port: 8000
+    targetPort: 8000
+  type: ClusterIP
+
+
+
+
+
+

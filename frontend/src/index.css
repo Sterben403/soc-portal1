@@ -1,0 +1,121 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #213547;
+  background-color: transparent;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #f7f9fb 0%, #e3eafc 60%, #f0f4ff 100%) !important;
+}
+.container {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+  transition: border-color 0.25s, background 0.2s, color 0.2s;
+}
+button:hover {
+  border-color: #646cff;
+  background: #213547;
+  color: #fff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.card {
+  padding: 2em;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 4px 24px 0 #e6eaf1;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: transparent;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+    color: #213547;
+  }
+}
+/* --- Admin Role Approvals table fixes --- */
+/* ===== Role Approvals: стабильная сетка без прыжков ===== */
+
+/* Таблица всегда делит ширины по colgroup и НЕ растягивает ячейки */
+.table-fixed {
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* Никаких переносов, если не влезло — обрезаем с многоточием */
+.table-fixed th,
+.table-fixed td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle; /* чтобы всё было по центру по высоте */
+}
+
+/* Жёсткие ширины колонок (подгоняй при желании) */
+.col-id      { width: 80px; }
+.col-user    { width: 140px; }
+.col-role    { width: 260px; }  /* заголовок «Запрашиваемая роль» длиннее */
+.col-actions { width: 240px; }  /* место под две кнопки */
+
+/* Кнопки одинаковой ширины — не «толкают» таблицу */
+.btn-approve,
+.btn-reject {
+  min-width: 110px;
+}
+
+/* На очень узких экранах слегка ужимаем таблицу */
+@media (max-width: 576px) {
+  .col-role { width: 200px; }
+  .col-actions { width: 200px; }
+}

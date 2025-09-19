@@ -11,3 +11,4 @@ class User(Base):
     hashed_password = Column(String)
     role = Column(String, default="client")
     reports = relationship("ReportArchive", back_populates="generated_by")
+    totp_secret = Column(String, nullable=True)

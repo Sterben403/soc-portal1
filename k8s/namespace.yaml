@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: soc-portal
+  labels:
+    name: soc-portal
+
+
+
+
+
+

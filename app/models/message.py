@@ -11,3 +11,4 @@ class Message(Base):
     sender_role = Column(String, nullable=False) 
     text = Column(Text, nullable=False)
     created_at = Column(DateTime(timezone=True), server_default=func.now())
+    attachment = Column(String, nullable=True)

@@ -1,0 +1,69 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: soc-portal-ingress
+  namespace: soc-portal
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "300"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "300"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      add_header X-Frame-Options DENY always;
+      add_header X-Content-Type-Options nosniff always;
+      add_header X-XSS-Protection "1; mode=block" always;
+      add_header Referrer-Policy strict-origin-when-cross-origin always;
+      add_header Strict-Transport-Security "max-age=63072000; includeSubDomains; preload" always;
+spec:
+  tls:
+  - hosts:
+    - your-domain.com
+    secretName: soc-portal-tls
+  rules:
+  - host: your-domain.com
+    http:
+      paths:
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: soc-portal-backend
+            port:
+              number: 8000
+      - path: /auth
+        pathType: Prefix
+        backend:
+          service:
+            name: soc-portal-backend
+            port:
+              number: 8000
+      - path: /report
+        pathType: Prefix
+        backend:
+          service:
+            name: soc-portal-backend
+            port:
+              number: 8000
+      - path: /attachments
+        pathType: Prefix
+        backend:
+          service:
+            name: soc-portal-backend
+            port:
+              number: 8000
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: soc-portal-frontend
+            port:
+              number: 80
+
+
+
+
+
+

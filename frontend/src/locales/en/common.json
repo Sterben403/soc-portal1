@@ -1,0 +1,291 @@
+{
+  "common": {
+    "loading": "Loading…",
+    "refresh": "Refresh",
+    "noData": "No data yet",
+    "empty": "Empty",
+    "noNotifications": "No notifications",
+    "nothingFound": "Nothing found",
+    "ok": "OK",
+    "cancel": "Cancel",
+    "save": "Save",
+    "back": "Back",
+    "send": "Send",
+    "error": "Error",
+    "loadError": "Failed to load",
+    "sending": "Sending...",
+    "unknownError": "Unknown error",
+    "open": "Open",
+    "closed": "Closed",
+    "created": "Created",
+    "status": "Status",
+    "title": "Title",
+    "actions": "Actions",
+    "approve": "Approve",
+    "reject": "Reject",
+    "create": "Create"
+  },
+  "admin": {
+    "roleRequests": {
+      "title": "Role requests",
+      "userId": "User ID",
+      "role": "Requested role",
+      "empty": "No pending requests",
+      "requestedRole": "Requested role"
+    }
+  },
+  "auth": {
+    "login": "Login",
+    "email": "Email",
+    "password": "Password",
+    "loginButton": "Sign in",
+    "register": "Register",
+    "noAccount": "No account?",
+    "logoutButton": "Logout"
+  },
+
+  "header": {
+    "signedAs": "Signed in as",
+    "account": "Account",
+    "language": "Language",
+    "adminSection": "Administration"
+  },
+  "profile": {
+    "title": "Profile",
+    "role": "Role",
+    "askForUpgrade": "Request a higher role",
+    "requestRole": "Request role",
+    "requestRoleBtn": "Send request",
+    "requestSent": "Request sent. An administrator will review it soon.",
+    "alreadyUpgraded": "You already have the highest role. No request is needed."
+  },
+  "reports": {
+    "title": "Reports",
+    "createTitle": "Create a report",
+    "readOnly": "Read-only for managers",
+    "format": "Format",
+    "pdf": "PDF",
+    "csv": "CSV",
+    "xlsx": "XLSX",
+    "periodFrom": "From",
+    "periodTo": "To",
+    "generate": "Generate",
+    "sendEmail": "Send to email",
+    "archiveTitle": "Archive",
+    "archiveEmpty": "No reports in the archive",
+    "managerNote": "Managers have view-only access"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "incidents": "Incidents",
+    "notifications": "Notifications",
+    "knowledge": "Knowledge Base",
+    "tickets": "Tickets",
+    "profile": "Profile",
+    "admin": "Administrator",
+    "reports": "Reports"
+  },
+
+  "roles": {
+    "admin": "Admin",
+    "managerRo": "Manager",
+    "analyst": "Analyst",
+    "client": "Client"
+  },
+
+  "dashboard": {
+    "goodNight": "Good night",
+    "goodMorning": "Good morning",
+    "goodDay": "Good afternoon",
+    "goodEvening": "Good evening",
+    "tabs": {
+      "schedule": "Schedule",
+      "analytics": "Analytics",
+      "sla": "SLA"
+    },
+    
+    "threat": {
+      "title": "Threat level",
+      "total": "Total incidents",
+      "high": "High priority",
+      "open": "Open",
+      "trend": "Trend",
+      "of100": "out of 100"
+    },
+    "cards": {
+      "openIncidents": "Open incidents",
+      "closedIncidents": "Closed incidents",
+      "allIncidents": "All incidents",
+      "thisMonth": "this month",
+      "activeChannels": "Active channels",
+      "current": "current"
+    },
+    "sla": {
+      "snapshot": "SLA snapshot",
+      "responseAndResolution": "Response & Resolution",
+      "avgResponse": "Avg. response time",
+      "avgResolution": "Avg. resolution time",
+      "compliance": "SLA compliance",
+      "title": "Response & Resolution"
+    },
+    "recentIncidents": "Recent incidents",
+    "title": "Title",
+    "status": "Status",
+    "created": "Created",
+    "open": "Open",
+    "closed": "Closed",
+    "notificationChannels": "Notification channels",
+    "email": "Email",
+    "telegram": "Telegram",
+    "webhook": "Webhook",
+    "supportTickets": "Support",
+    "viewTickets": "View tickets",
+    "createNewTicket": "Create new ticket",
+    "latestNotifs": "Latest notifications",
+    "latestNotifications": "Latest notifications",
+    "upcoming": "Upcoming",
+    "calendarStub": "Your calendar will appear here (stub).",
+    "quickActions": "Quick actions",
+    "gotoIncidents": "Go to incidents",
+    "createTicket": "Create ticket",
+    "activeChannels": {
+      "title": "Active channels",
+      "switchOnAnalytics": "Enable/disable channels on the Analytics tab"
+    }
+  },
+
+  "incidents": {
+    "title": "Incidents",
+    "tabs": {
+      "all": "All",
+      "open": "Open",
+      "closed": "Closed"
+    },
+    "searchPlaceholder": "Search by title/description…",
+    "col": {
+      "id": "ID",
+      "title": "Title",
+      "status": "Status",
+      "created": "Created"
+    },
+    "currentRole": "Current role",
+    "new": "New incident",
+    "form": {
+      "title": "Title",
+      "description": "Description",
+      "priority": "Priority",
+      "priorityLow": "Low",
+      "priorityMedium": "Medium",
+      "priorityHigh": "High"
+    },
+    "chat": {
+      "attach": "Attach file",
+      "noFile": "No file chosen",
+      "title": "Incident chat #{{id}}",
+      "placeholder": "Write a message…",
+      "placeholderManager": "Read-only for Manager",
+      "empty": "No messages yet",
+      "loadError": "Failed to load messages",
+      "sendError": "Failed to send message"
+    }
+  },
+  "incident": {
+    "actions": {
+        "created": "created",
+        "closed": "closed",
+        "confirmed": "confirmed",
+        "reopened": "reopened"
+      },
+    "notFound": "Incident not found",
+    "tabs": {
+      "overview": "Overview",
+      "history": "History",
+      "chat": "Discussion"
+    },
+    "fields": {
+      "status": "Status",
+      "priority": "Priority",
+      "created": "Created"
+    },
+    "buttons": {
+      "close": "Close",
+      "confirm": "Confirm",
+      "reopen": "Reopen"
+    },
+    "downloadAttachment": "Download attachment",
+    "event": "Event",
+    "createdAt": "created"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "filters": {
+      "all": "All channels",
+      "email": "Email",
+      "telegram": "Telegram",
+      "webhook": "Webhook"
+    },
+    "sort": {
+      "new": "Newest first",
+      "old": "Oldest first",
+      "newFirst": "Newest first",
+      "oldFirst": "Oldest first"
+    }
+  },
+
+  "tickets": {
+    "title": "Tickets",
+    "category": "Category",
+    "status": "Status",
+    "newTicket": "New ticket",
+    "field": {
+      "title": "Title",
+      "category": "Category",
+      "description": "Description",
+      "chooseCategory": "Choose a category"
+    },
+    "form": {
+      "categoryHint": "Choose a category"
+    },
+    "errors": {
+      "createFailed": "Failed to create ticket"
+    },
+    
+    "placeholder": {
+      "short": "Enter a short title",
+      "long": "Enter a detailed description",
+      "chooseCategory": "Choose a category"
+    },
+    "create": "Create",
+    "cancel": "Cancel",
+    "replyError": "Failed to send reply",
+    "replyPlaceholder": "Write your reply…",
+    "notFound": "Ticket not found",
+    "filters": {
+      "all": "All statuses",
+      "open": "Open",
+      "pending": "Pending",
+      "closed": "Closed"
+    },
+    "categories": {
+      "Вопрос": "Question",
+      "Ошибка": "Bug",
+      "Инцидент": "Incident",
+      "Запрос на источник": "Source request"
+    },
+    "createNew": "Create new ticket",
+    "empty": "No tickets"
+  },
+
+  "knowledge": {
+    "title": "Knowledge Base",
+    "new": "New article",
+    "newTitle": "New knowledge article",
+    "form": {
+      "title": "Title",
+      "content": "Content"
+    },
+    "toast": {
+      "created": "Article has been created"
+    }
+  }
+}

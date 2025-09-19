@@ -1,0 +1,287 @@
+{
+  "common": {
+    "loading": "Загрузка…",
+    "refresh": "Обновить",
+    "noData": "Нет данных",
+    "empty": "Пусто",
+    "noNotifications": "Нет уведомлений",
+    "nothingFound": "Ничего не найдено",
+    "ok": "Ок",
+    "cancel": "Отмена",
+    "save": "Сохранить",
+    "back": "Назад",
+    "send": "Отправить",
+    "error": "Ошибка",
+    "loadError": "Не удалось загрузить",
+    "unknownError": "Неизвестная ошибка",
+    "open": "Открыт",
+    "closed": "Закрыт",
+    "created": "Создан",
+    "status": "Статус",
+    "title": "Название",
+    "actions": "Действия",
+    "approve": "Одобрить",
+     "reject": "Отклонить",
+     "create": "Создать"
+  },
+  "admin": {
+    "roleRequests": {
+      "title": "Запросы на роли",
+      "userId": "ID пользователя",
+      "role": "Запрашиваемая роль",
+      "empty": "Нет ожидающих запросов",
+      "requestedRole": "Запрашиваемая роль"
+    }
+  },
+  "auth": {
+    "login": "Вход",
+    "email": "E-mail",
+    "password": "Пароль",
+    "loginButton": "Войти",
+    "register": "Регистрация",
+    "noAccount": "Нет аккаунта?",
+    "logoutButton": "Выйти"
+  },
+
+  "header": {
+    "signedAs": "Вы вошли как",
+    "account": "Аккаунт",
+    "language": "Язык",
+    "adminSection": "Администрирование"
+  },
+  "profile": {
+    "title": "Профиль",
+    "role": "Роль",
+    "askForUpgrade": "Запросить повышение роли",
+    "requestRole": "Запросить роль",
+    "requestRoleBtn": "Отправить запрос",
+    "requestSent": "Запрос отправлен. Администратор скоро его рассмотрит.",
+    "alreadyUpgraded": "У вас уже максимальная роль. Запрос не требуется."
+  },
+  "reports": {
+    "title": "Отчёты",
+    "createTitle": "Создание отчёта",
+    "readOnly": "Только чтение для менеджеров",
+    "format": "Формат",
+    "pdf": "PDF",
+    "csv": "CSV",
+    "xlsx": "XLSX",
+    "periodFrom": "С",
+    "periodTo": "По",
+    "generate": "Сгенерировать",
+    "sendEmail": "Отправить на e-mail",
+    "archiveTitle": "Архив отчётов",
+    "archiveEmpty": "В архиве пока нет отчётов",
+    "managerNote": "У менеджеров доступ только на чтение"
+  },
+  "navigation": {
+    "dashboard": "Дашборд",
+    "incidents": "Инциденты",
+    "notifications": "Уведомления",
+    "knowledge": "База знаний",
+    "tickets": "Тикеты",
+    "profile": "Профиль",
+    "admin": "Администратор",
+    "reports": "Отчёты"
+  },
+
+  "roles": {
+    "admin": "Админ",
+    "managerRo": "Менеджер",
+    "analyst": "Аналитик",
+    "client": "Клиент"
+  },
+
+  "dashboard": {
+    "goodNight": "Доброй ночи",
+    "goodMorning": "Доброе утро",
+    "goodDay": "Добрый день",
+    "goodEvening": "Добрый вечер",
+    "tabs": {
+      "schedule": "Расписание",
+      "analytics": "Аналитика",
+      "sla": "SLA"
+    },
+    "threat": {
+      "title": "Уровень угроз",
+      "total": "Всего инцидентов",
+      "high": "Высокий приоритет",
+      "open": "Открытые",
+      "trend": "Тренд",
+      "of100": "из 100"
+    },
+    "cards": {
+      "openIncidents": "Открытые инциденты",
+      "closedIncidents": "Закрытые инциденты",
+      "allIncidents": "Все инциденты",
+      "thisMonth": "в этом месяце",
+      "activeChannels": "Активные каналы",
+      "current": "текущие"
+    },
+    "sla": {
+      "snapshot": "Срез SLA",
+      "responseAndResolution": "Ответ и разрешение",
+      "avgResponse": "Среднее время ответа",
+      "avgResolution": "Среднее время решения",
+      "compliance": "Соответствие SLA",
+      "title": "Ответ и решение"
+    },
+    "recentIncidents": "Последние инциденты",
+    "title": "Название",
+    "status": "Статус",
+    "created": "Создан",
+    "open": "Открытые",
+    "closed": "Закрытые",
+    "notificationChannels": "Каналы уведомлений",
+    "email": "Email",
+    "telegram": "Telegram",
+    "webhook": "Webhook",
+    "supportTickets": "Поддержка",
+    "viewTickets": "Смотреть тикеты",
+    "createNewTicket": "Создать новый тикет",
+    "latestNotifs": "Последние уведомления",
+    "latestNotifications": "Последние уведомления",
+    "upcoming": "Ближайшие",
+    "calendarStub": "Здесь будет календарь (заглушка).",
+    "quickActions": "Быстрые действия",
+    "gotoIncidents": "Перейти к инцидентам",
+    "createTicket": "Создать тикет",
+    "activeChannels": {
+      "title": "Активные каналы",
+      "switchOnAnalytics": "Включайте/отключайте каналы на вкладке «Аналитика»"
+    }
+  },
+
+  "incidents": {
+    "title": "Инциденты",
+    "tabs": {
+      "all": "Все",
+      "open": "Открытые",
+      "closed": "Закрытые"
+    },
+    "searchPlaceholder": "Поиск по названию/описанию…",
+    "col": {
+      "id": "ID",
+      "title": "Название",
+      "status": "Статус",
+      "created": "Создан"
+    },
+    "currentRole": "Текущая роль",
+    "new": "Новый инцидент",
+    "form": {
+      "title": "Название",
+      "description": "Описание",
+      "priority": "Приоритет",
+      "priorityLow": "Низкий",
+      "priorityMedium": "Средний",
+      "priorityHigh": "Высокий"
+    },
+    "chat": {
+      "title": "Чат инцидента #{{id}}",
+      "placeholder": "Напишите сообщение…",
+      "placeholderManager": "Только чтение для менеджера",
+      "empty": "Сообщений пока нет",
+      "loadError": "Не удалось загрузить сообщения",
+      "sendError": "Не удалось отправить сообщение",
+       "attach": "Прикрепить файл",
+      "noFile": "Файл не выбран"
+    }
+  },
+  "incident": {
+    "actions": {
+        "created": "создан",
+        "closed": "закрыт",
+        "confirmed": "подтверждён",
+        "reopened": "переоткрыт"
+      },
+    "notFound": "Инцидент не найден",
+    "tabs": {
+      "overview": "Описание",
+      "history": "Хронология",
+      "chat": "Обсуждение"
+    },
+    "fields": {
+      "status": "Статус",
+      "priority": "Приоритет",
+      "created": "Создан"
+    },
+    "buttons": {
+      "close": "Закрыть",
+      "confirm": "Подтвердить",
+      "reopen": "Переоткрыть"
+    },
+    "downloadAttachment": "Скачать вложение",
+    "event": "Событие",
+    "createdAt": "создан"
+  },
+  "notifications": {
+    "title": "Уведомления",
+    "filters": {
+      "all": "Все каналы",
+      "email": "Email",
+      "telegram": "Telegram",
+      "webhook": "Webhook"
+    },
+    "sort": {
+      "new": "Сначала новые",
+      "old": "Сначала старые",
+      "newFirst": "Сначала новые",
+      "oldFirst": "Сначала старые"
+    }
+  },
+
+  "tickets": {
+    "title": "Тикеты",
+    "category": "Категория",
+    "status": "Статус",
+    "newTicket": "Новый тикет",
+    "field": {
+      "title": "Заголовок",
+      "category": "Категория",
+      "description": "Описание",
+      "chooseCategory": "Выберите категорию"
+    },
+    "errors": {
+      "createFailed": "Не удалось создать тикет"
+    },
+    "form": {
+      "categoryHint": "Выберите категорию"
+    },
+    "placeholder": {
+      "short": "Введите краткое название",
+      "long": "Введите подробное описание",
+      "chooseCategory": "Выберите категорию"
+    },
+    "create": "Создать",
+    "cancel": "Отмена",
+    "replyError": "Не удалось отправить ответ",
+    "replyPlaceholder": "Напишите ваш ответ…",
+    "notFound": "Тикет не найден",
+    "filters": {
+      "all": "Все статусы",
+      "open": "Открыт",
+      "pending": "В ожидании",
+      "closed": "Закрыт"
+    },
+    "categories": {
+      "Вопрос": "Вопрос",
+      "Ошибка": "Ошибка",
+      "Инцидент": "Инцидент",
+      "Запрос на источник": "Запрос на источник"
+    },
+    "createNew": "Создать новый тикет",
+    "empty": "Тикетов нет"
+  },
+  "knowledge": {
+    "title": "База знаний",
+    "new": "Новая статья",
+    "newTitle": "Создание статьи базы знаний",
+    "form": {
+      "title": "Название",
+      "content": "Содержимое"
+    },
+    "toast": {
+      "created": "Статья создана"
+    }
+  }
+}

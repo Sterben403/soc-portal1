@@ -1,0 +1,287 @@
+{
+  "common": {
+    "loading": "Жүктелуде…",
+    "refresh": "Жаңарту",
+    "noData": "Дерек жоқ",
+    "empty": "Бос",
+    "noNotifications": "Хабарламалар жоқ",
+    "nothingFound": "Ештеңе табылмады",
+    "ok": "ОК",
+    "cancel": "Бас тарту",
+    "save": "Сақтау",
+    "back": "Артқа",
+    "send": "Жіберу",
+    "error": "Қате",
+    "loadError": "Жүктеу сәтсіз аяқталды",
+    "unknownError": "Белгісіз қате",
+    "open": "Ашық",
+    "closed": "Жабық",
+    "created": "Құрылды",
+    "status": "Күйі",
+    "title": "Атауы",
+    "actions": "Әрекеттер",
+    "approve": "Қабылдау",
+    "reject": "Қайтару",
+    "create": "Жасау"
+  },
+  "admin": {
+    "roleRequests": {
+      "title": "Рөл сұраулары",
+      "userId": "Пайдаланушы ID",
+      "role": "Сұралған рөл",
+      "empty": "Күтіп тұрған сұраулар жоқ",
+      "requestedRole": "Сұралған рөл"
+    }
+  },
+  "auth": {
+    "login": "Кіру",
+    "email": "E-mail",
+    "password": "Құпиясөз",
+    "loginButton": "Кіру",
+    "register": "Тіркелу",
+    "noAccount": "Тіркелгі жоқ па?",
+    "logoutButton": "Шығу"
+  },
+
+  "header": {
+    "signedAs": "Кім ретінде кірдіңіз",
+    "account": "Есептік жазба",
+    "language": "Тіл",
+    "adminSection": "Әкімшілік"
+  },
+  "profile": {
+    "title": "Профиль",
+    "role": "Рөл",
+    "askForUpgrade": "Жоғары рөл сұрау",
+    "requestRole": "Рөл сұрау",
+    "requestRoleBtn": "Өтініш жіберу",
+    "requestSent": "Өтініш жіберілді. Әкімші жақында қарастырады.",
+    "alreadyUpgraded": "Сізде ең жоғары рөл бар. Өтініш қажет емес."
+  },
+  "reports": {
+    "title": "Есептер",
+    "createTitle": "Есеп құру",
+    "readOnly": "Менеджерлер үшін тек оқу",
+    "format": "Пішім",
+    "pdf": "PDF",
+    "csv": "CSV",
+    "xlsx": "XLSX",
+    "periodFrom": "Басталуы",
+    "periodTo": "Аяқталуы",
+    "generate": "Жасау",
+    "sendEmail": "E-mail-ға жіберу",
+    "archiveTitle": "Архив",
+    "archiveEmpty": "Архивте есептер жоқ",
+    "managerNote": "Менеджерлерде тек оқу құқығы бар"
+  },
+  "navigation": {
+    "dashboard": "Дашборд",
+    "incidents": "Инциденттер",
+    "notifications": "Хабарламалар",
+    "knowledge": "Білім базасы",
+    "tickets": "Тикеттер",
+    "profile": "Профиль",
+    "admin": "Администратор",
+    "reports": "Есептер"
+  },
+
+  "roles": {
+    "admin": "Әкімші",
+    "managerRo": "Менеджер",
+    "analyst": "Талдаушы",
+    "client": "Клиент"
+  },
+
+  "dashboard": {
+    "goodNight": "Қайырлы түн",
+    "goodMorning": "Қайырлы таң",
+    "goodDay": "Қайырлы күн",
+    "goodEvening": "Қайырлы кеш",
+    "tabs": {
+      "schedule": "Кесте",
+      "analytics": "Талдау",
+      "sla": "SLA"
+    },
+    "threat": {
+      "title": "Қауіп деңгейі",
+      "total": "Барлық инциденттер",
+      "high": "Жоғары басымдық",
+      "open": "Ашық",
+      "trend": "Тренд",
+      "of100": "100-дің ішінен"
+    },
+    "cards": {
+      "openIncidents": "Ашық инциденттер",
+      "closedIncidents": "Жабық инциденттер",
+      "allIncidents": "Барлық інциденттер",
+      "thisMonth": "осы айда",
+      "activeChannels": "Белсенді арналар",
+      "current": "қазір"
+    },
+    "sla": {
+      "snapshot": "SLA кесіндісі",
+      "responseAndResolution": "Жауап және шешім",
+      "avgResponse": "Орташа жауап уақыты",
+      "avgResolution": "Орташа шешу уақыты",
+      "compliance": "SLA сәйкестігі",
+      "title": "Жауап және шешім"
+    },
+    "recentIncidents": "Соңғы инциденттер",
+    "title": "Атауы",
+    "status": "Күйі",
+    "created": "Құрылған",
+    "open": "Ашық",
+    "closed": "Жабық",
+    "notificationChannels": "Хабарлама арналары",
+    "email": "Email",
+    "telegram": "Telegram",
+    "webhook": "Webhook",
+    "supportTickets": "Қолдау",
+    "viewTickets": "Тикеттерді көру",
+    "createNewTicket": "Жаңа тикет жасау",
+    "latestNotifs": "Соңғы хабарламалар",
+    "latestNotifications": "Соңғы хабарламалар",
+    "upcoming": "Жақын арада",
+    "calendarStub": "Мұнда күнтізбе көрсетіледі (уақытша).",
+    "quickActions": "Жылдам әрекеттер",
+    "gotoIncidents": "Инциденттерге өту",
+    "createTicket": "Тикет жасау",
+    "activeChannels": {
+      "title": "Белсенді арналар",
+      "switchOnAnalytics": "Арналарды «Талдау» бетінде қосыңыз/сөндіріңіз"
+    }
+  },
+
+  "incidents": {
+    "title": "Инциденттер",
+    "tabs": {
+      "all": "Барлығы",
+      "open": "Ашық",
+      "closed": "Жабық"
+    },
+    "searchPlaceholder": "Атауы/сипаттамасы бойынша іздеу…",
+    "new": "Жаңа инцидент",
+    "form": {
+      "title": "Атауы",
+      "description": "Сипаттамасы",
+      "priority": "Маңыздылығы",
+      "priorityLow": "Төмен",
+      "priorityMedium": "Орташа",
+      "priorityHigh": "Жоғары"
+    },
+    "col": {
+      "id": "ID",
+      "title": "Атауы",
+      "status": "Күйі",
+      "created": "Құрылған"
+    },
+    "currentRole": "Ағымдағы рөл",
+    "chat": {
+      "title": "Инцидент чаты #{{id}}",
+      "placeholder": "Хабарлама жазыңыз…",
+      "placeholderManager": "Менеджер үшін тек оқу",
+      "empty": "Әзірге хабарламалар жоқ",
+      "loadError": "Хабарламаларды жүктеу сәтсіз аяқталды",
+      "sendError": "Хабарламаны жіберу сәтсіз аяқталды",
+      "attach": "Файл тіркеу",
+      "noFile": "Файл таңдалмаған"
+    }
+  },
+  "incident": {
+    "notFound": "Инцидент табылмады",
+    "actions": {
+        "created": "құрылды",
+        "closed": "жабылды",
+        "confirmed": "растады",
+        "reopened": "қайта ашылды"
+      },
+    "tabs": {
+      "overview": "Сипаттама",
+      "history": "Хронология",
+      "chat": "Талқылау"
+    },
+    "fields": {
+      "status": "Күйі",
+      "priority": "Маңыздылығы",
+      "created": "Құрылған уақыты"
+    },
+    "buttons": {
+      "close": "Жабу",
+      "confirm": "Растау",
+      "reopen": "Қайта ашу"
+    },
+    "downloadAttachment": "Тіркемені жүктеу",
+    "event": "Оқиға",
+    "createdAt": "құрылған"
+  },
+  "notifications": {
+    "title": "Хабарламалар",
+    "filters": {
+      "all": "Барлық арналар",
+      "email": "Email",
+      "telegram": "Telegram",
+      "webhook": "Webhook"
+    },
+    "sort": {
+      "new": "Алдымен жаңалары",
+      "old": "Алдымен ескілері",
+      "newFirst": "Алдымен жаңалары",
+      "oldFirst": "Алдымен ескілері"
+    }
+  },
+
+  "tickets": {
+    "title": "Тикеттер",
+    "category": "Санат",
+    "status": "Күйі",
+    "newTicket": "Жаңа тикет",
+    "field": {
+      "title": "Тақырып",
+      "category": "Санат",
+      "description": "Сипаттама",
+      "chooseCategory": "Санатты таңдаңыз"
+    },
+    "form": {
+      "categoryHint": "Санатты таңдаңыз"
+    },
+    "errors": {
+      "createFailed": "Тикетті жасау мүмкін болмады"
+    },
+    "placeholder": {
+      "short": "Қысқа атауды енгізіңіз",
+      "long": "Толық сипаттаманы енгізіңіз",
+      "chooseCategory": "Санатты таңдаңыз"
+    },
+    "create": "Жасау",
+    "cancel": "Бас тарту",
+    "replyError": "Жауапты жіберу сәтсіз аяқталды",
+    "replyPlaceholder": "Жауабыңызды жазыңыз…",
+    "notFound": "Тикет табылмады",
+    "filters": {
+      "all": "Барлық күйлер",
+      "open": "Ашық",
+      "pending": "Күту",
+      "closed": "Жабық"
+    },
+    "categories": {
+      "Вопрос": "Сұрақ",
+      "Ошибка": "Қате",
+      "Инцидент": "Инцидент",
+      "Запрос на источник": "Дереккөзге сұрау"
+    },
+    "createNew": "Жаңа тикет жасау",
+    "empty": "Тикеттер жоқ"
+  },
+  "knowledge": {
+    "title": "Білім базасы",
+    "new": "Жаңа мақала",
+    "newTitle": "Білім базасына жаңа мақала қосу",
+    "form": {
+      "title": "Атауы",
+      "content": "Мазмұны"
+    },
+    "toast": {
+      "created": "Мақала жасалды"
+    }
+  }
+}
